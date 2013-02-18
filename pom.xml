@@ -21,23 +21,24 @@
     MA 02110-1301  USA
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.everit</groupId>
-		<artifactId>oss</artifactId>
-		<version>4-SNAPSHOT</version>
-	</parent>
+    <parent>
+        <groupId>org.everit</groupId>
+        <artifactId>oss</artifactId>
+        <version>4-SNAPSHOT</version>
+    </parent>
 
-	<groupId>org.everit.osgi.jdbc</groupId>
-	<artifactId>org.everit.osgi.jdbc.h2</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+    <groupId>org.everit.osgi.jdbc</groupId>
+    <artifactId>org.everit.osgi.jdbc.h2</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
-	<packaging>bundle</packaging>
-	<name>H2 OSGi Extension</name>
-	<description>Exposes the H2 Driver as OSGi DataSourceFactory</description>
+    <packaging>bundle</packaging>
+    <name>H2 OSGi Extension</name>
+    <description>Exposes the H2 Driver as OSGi DataSourceFactory</description>
 
     <scm>
         <connection>scm:git:git://github.com/everit-org/osgi-jdbc-h2.git</connection>
@@ -59,44 +60,44 @@
         <system>GitHub</system>
         <url>https://github.com/everit-org/osgi-jdbc-h2/issues</url>
     </issueManagement>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Activator>org.everit.osgi.jdbc.h2.Activator</Bundle-Activator>
-						<Export-Package>org.everit.osgi.jdbc.h2</Export-Package>
-						<Import-Package>
-							*
-						</Import-Package>
-					</instructions>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Activator>org.everit.osgi.jdbc.h2.Activator</Bundle-Activator>
+                        <Export-Package>org.everit.osgi.jdbc.h2</Export-Package>
+                        <Import-Package>
+                            *
+                        </Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.everit.osgi.bundles</groupId>
-			<artifactId>org.everit.osgi.bundles.org.h2</artifactId>
-			<version>1.3.167</version>
-		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<version>4.2.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.everit.osgi.bundles</groupId>
-			<artifactId>org.everit.osgi.bundles.org.osgi.service.jdbc</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.everit.osgi.bundles</groupId>
+            <artifactId>org.everit.osgi.bundles.org.h2</artifactId>
+            <version>1.3.167</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>4.2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.everit.osgi.bundles</groupId>
+            <artifactId>org.everit.osgi.bundles.org.osgi.service.jdbc</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
     <repositories>
         <repository>
